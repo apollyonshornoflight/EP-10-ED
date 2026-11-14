@@ -40,7 +40,7 @@ int main(void) {
     }
     fclose(f);
 
-    printf("%-3d %-*s%*s %-3d %-3d %-3d %-3d %-3d %-3d %-3d\n",
+    printf("%-3s %-*s %-3s %-3s %-3s %-3s %-3s %-3s %s\n",
            "ID", NAME_WIDTH, "Time", "V", "E", "D", "GM", "GS", "S", "PG");
 
     for (int i = 0; i < tl_size(tl); i++) {
@@ -57,7 +57,7 @@ int main(void) {
         const char *name = team_name(t);
         int pad = utf8_extra_bytes(name);
 
-        printf("%-3d %-*s%*s %-3d %-3d %-3d %-3d %-3d %-3d %d\n",
+        printf("%-3d %-*s%*s %-3d %-3d %-3d %-3d %-3d %-3d %-3d\n",
                team_id(t), NAME_WIDTH, name, pad, "",
                w, d, l, gm, gs, s, pg);
     }
